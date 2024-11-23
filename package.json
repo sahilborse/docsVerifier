@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon backend/index.js"
+    "server": "nodemon backend/index.js",
+    "build-backend": "cd backend && npm install && npm run build",
+    "build-frontend": "cd frontend && npm install && npm run build",
+    "build-all": "npm run build-backend && npm run build-frontend",
+    "start": "npm run build-all && npm run server"
   },
   "author": "",
   "license": "ISC",
